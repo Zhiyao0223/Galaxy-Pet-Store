@@ -1,0 +1,305 @@
+:root{
+    --orange:orange;
+    --black:#0c083b;
+    --light-color:rgb(85, 84, 84);
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border:.2rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem solid var(--black);
+}
+
+body{
+    background:url(https://www.rd.com/wp-content/uploads/2021/01/GettyImages-588935825.jpg);
+    background-size: auto;
+    background-position: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.loginbox{
+    height: 550px;
+    width: 22%;
+    background: #ffffff;
+    border-style: double solid;
+    border-color: red green purple blue;
+    color: #000;
+    top: 60%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+.hale{
+    border-style: double solid;
+    border-color: red green purple blue;
+    width: 95px;
+    height: 95px;
+    border-radius: 70%;
+    position: absolute;
+    top: -50px;
+    right: calc(50% - 50px);
+}
+
+h1{
+    color: #000000;
+    margin: 0;
+    padding: 0 0 22px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+
+}
+
+.loginbox input{
+    width: 255px;
+    margin-bottom: 20px;
+}
+
+.loginbox input[type="text"], input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #000000;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #000000;
+    font-size: 16px;
+}
+
+.loginbox input[type="submit"]{
+
+    outline: none;
+    border: none;
+    height: 40px;
+    background: red;
+    color: #000000;
+    font-size: 17px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.loginbox input[type="submit"]:hover{
+    cursor: pointer;
+    background: #00FFFF;
+    color: #000;
+}
+
+.loginbox a{
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 20px;
+    color: #000000;
+    font-weight: bold;
+
+}
+
+.loginbox a:hover{
+    color: #4169E1;
+}
+
+/* Header */
+.header-0 {
+    background: rgb(245, 245, 245);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    place-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+   
+.header-0 a {
+    text-decoration: none;
+}
+
+#title {
+    display: inline-block;
+    margin-left: 2em;
+    width: 50%;
+}
+    
+#headerContainer {
+    width: 30%;
+    height: 4rem;
+    margin-top: 2rem;
+}
+    
+#iconSection {
+    margin-right: 1rem;
+    float: right;
+    font-size: 2.5rem;
+}
+    
+#iconSection a {
+    color: var(--black);
+    padding-left: 1rem;
+}
+    
+#iconSection a:hover {
+    color: skyblue;
+}
+    
+.logo {
+    color: #ff523b;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+    
+.logo i {
+    padding-right: 0.5rem;
+}
+    
+.header-0 .icons a {
+    font-size: 2.5rem;
+    color: var(--black);
+    padding-left: 1rem;
+}
+
+/* Forget Password Modal Box */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modalContent {
+    display: flexbox;
+    width: 50%;
+    margin: 10% auto;
+    padding: 5px;
+    padding-left: 2rem;
+    border: 1px solid #888;
+    background-color: white;
+}
+
+#close {
+    width: 5%;
+    float:right;
+    color: black;
+    font-size: 25px;
+}
+
+#close:hover, #close:focus {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#row {
+    margin-top: 2rem;
+    display: flex;
+}
+
+#column-1 {
+    width: 30%;
+}
+
+#column-2 {
+    width: 50%;
+}
+
+#modalHeader {
+    font-weight: bold;
+    font-size: 20px;
+    top: 0;
+}
+
+#modalLabel {
+    display: inline-block;
+    vertical-align: center;
+    padding-top: 10px;
+
+}
+
+.modalInput {
+    display: inline-block;
+}
+
+#email {
+    padding: 5px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#modalSubmit {
+    background-color: orange;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 2rem;
+    width: 30%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+#asterisk {
+    color: red;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Header */
+.header{
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top:0; left:0; right: 0;
+    z-index: 980;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1.2rem 9%;
+    background:#fff;
+    box-shadow: var(--box-shadow);
+  }
+  .header a {
+    text-decoration: none;
+  }
+  
+  .header .logo{
+    font-size: 25px;
+    font-weight: bolder;
+    color:var(--black);
+  }
+  
+  .header .logo i{
+    color:var(--orange);
+  }
+  
+  .header .navbar a{
+    font-size: 18px;
+    margin:0 1rem;
+    color:var(--black);
+  }
+  
+  .header .navbar a:hover{
+    color:var(--orange);
+  }
+  
+  .header .icons div{
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: .5rem;
+    background: #eee;
+    color:var(--black);
+    font-size: 20px;
+    margin-left: .3rem;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .header .icons div:hover{
+    background: var(--orange);
+    color:#fff;
+  }

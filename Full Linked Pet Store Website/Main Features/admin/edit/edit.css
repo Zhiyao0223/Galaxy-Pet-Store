@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Satisfy', cursive;
+    margin-left: 10px;
+    display: inline;
+}
+
+input[type='text']:not(:focus):invalid {
+    border: solid red;
+}
+
+textarea:not(:focus):invalid {
+    border: solid red;
+}
+
+input, textarea, select{
+    width:200px;
+}
+
+textarea {
+    width: 500px;
+    height: 200px;
+}
+
+input[type="submit"], input[type="reset"] {
+    width: 100px;
+    border-radius: 1rem;
+    cursor: pointer;
+    padding: 5px;
+    margin: 10px 10px;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    box-shadow: 0px 0px 0.3px 0.3px;
+}
+
+label {
+    margin: 10px;
+    margin-left: 1.5rem;
+    font-size: 15px;
+    float: left;    
+}
+
+table {
+    border: 0;
+    width: 50%;
+}
+
+.backBtn {
+    float: right;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin-right: 1%;
+    cursor: pointer;
+}
+
+.backBtn a:hover {
+    color: white;
+}
+
+.backBtn:hover {
+    background: orange;
+}

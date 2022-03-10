@@ -1,0 +1,170 @@
+:root{
+    --orange:orange;
+    --black:#0c083b;
+    --light-color:rgb(85, 84, 84);
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border:.2rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem solid var(--black);
+}
+
+body{
+    background:url(https://www.rd.com/wp-content/uploads/2021/01/GettyImages-588935825.jpg);
+    background-size: auto;
+    background-position: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.loginbox{
+    height: 550px;
+    width: 22%;
+    background: #ffffff;
+    border-style: double solid;
+    border-color: red green purple blue;
+    color: #000;
+    top: 60%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    line-height: 1px;
+}
+
+.hale{
+    border-style: double solid;
+    border-color: red green purple blue;
+    width: 75px;
+    height: 75px;
+    border-radius: 70%;
+    position: absolute;
+    top: -40px;
+    right: calc(50% - 50px);
+
+}
+
+h1{
+    color: #000000;
+    margin: 4px;
+    padding: 0 0 35px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 15px;
+
+}
+
+.loginbox input{
+    width: 255px;
+    margin-bottom: 20px;
+}
+
+.loginbox input[type="text"], input[type="password"], input[type="email"]{
+    border: none;
+    border-bottom: 1px solid #000000;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #000000;
+    font-size: 13px;
+}
+
+.loginbox input[type="submit"]{
+
+    outline: none;
+    border: none;
+    height: 40px;
+    background: red;
+    color: #000000;
+    font-size: 17px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.loginbox input[type="submit"]:hover{
+    cursor: pointer;
+    background: #00FFFF;
+    color: #000;
+}
+
+.loginbox a{
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 20px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.loginbox a:hover{
+    color: #4169E1;
+}
+
+.loginbox b{
+    text-decoration: none;
+    font-size: 11px;
+    line-height: 13px;
+    color: #696969;
+    top: 500px;
+}
+
+/* Header */
+.header{
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top:0; left:0; right: 0;
+    z-index: 980;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1.2rem 9%;
+    background:#fff;
+    box-shadow: var(--box-shadow);
+  }
+  .header a {
+    text-decoration: none;
+  }
+  
+  .header .logo{
+    font-size: 25px;
+    font-weight: bolder;
+    color:var(--black);
+  }
+  
+  .header .logo i{
+    color:var(--orange);
+  }
+  
+  .header .navbar a{
+    font-size: 18px;
+    margin:0 1rem;
+    color:var(--black);
+  }
+  
+  .header .navbar a:hover{
+    color:var(--orange);
+  }
+  
+  .header .icons div{
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: .5rem;
+    background: #eee;
+    color:var(--black);
+    font-size: 20px;
+    margin-left: .3rem;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .header .icons div:hover{
+    background: var(--orange);
+    color:#fff;
+  }
