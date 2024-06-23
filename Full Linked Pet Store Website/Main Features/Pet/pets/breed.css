@@ -152,6 +152,7 @@ td {
     color: white;
     font-weight: bold;
     font-size: 30px;
+    -webkit-user-select: none; /* Add -webkit prefix for Safari */
     user-select: none;
     padding: 0px;
 }
@@ -161,6 +162,7 @@ td {
     color: white;
     font-weight: bold;
     font-size: 30px;
+    -webkit-user-select: none;
     user-select: none;
     padding: 0px;
 }

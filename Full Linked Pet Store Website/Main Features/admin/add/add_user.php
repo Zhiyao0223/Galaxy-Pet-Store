@@ -1,23 +1,26 @@
 <?php
-	if (!isset($_SESSION["mySession"])) {
-		session_start();
-		$error =    "<script>
+if (!isset($_SESSION["mySession"])) {
+	session_start();
+	$error = "<script>
 						alert('Please login to proceed.');
 						window.location='../../Login/Login_inter.php';
 					</script>";
-		$_SESSION["error"] = $error;
-	}
+	$_SESSION["error"] = $error;
+}
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Add data</title>
 	<link rel='stylesheet' href='form.css'>
 </head>
+
 <body>
 	<h1>Add New User</h1>
 	<div class='backBtn'>
-		<a href='../admin.php'>< Back</a>
+		<a href='../admin.php'>
+			< Back</a>
 	</div>
 	<form action="insert_user.php" method="post">
 		<div id="container">
@@ -61,12 +64,13 @@
 					</select>
 				</div>
 			</div>
-			
+
 			<div class="field">
-				<input type="submit" name="submit" value="Submit"> 
+				<input type="submit" name="submit" value="Submit">
 				<input type="reset" value="Reset">
 			</div>
 		</div>
 	</form>
 </body>
+
 </html>

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Store Main Menu</title>
 
-    
+
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
     <!-- font awesome cdn link  -->
@@ -15,50 +16,46 @@
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
 
-    
-
     <!-- custom js file link  -->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
-
-
 </head>
+
 <body>
-    <?php 
-        session_start();
-        include("conn.php");
+    <?php
+    session_start();
+    include ("conn.php");
 
-        if (isset($_SESSION['mySession'])) {
-            $username = $_SESSION["mySession"];
-            $sql_id = "SELECT * FROM user WHERE username = '$username'";
-            $result_id = mysqli_query($con, $sql_id);
-            $array = mysqli_fetch_array($result_id);
-            $userID = $array['userID'];
-            $img = $array['profile_pic'];
-            $username = $array['username'];
-        
-            if ($img == NULL) {
-                $img = "user-alt.png";
-            }
+    if (isset($_SESSION['mySession'])) {
+        $username = $_SESSION["mySession"];
+        $sql_id = "SELECT * FROM user WHERE username = '$username'";
+        $result_id = mysqli_query($con, $sql_id);
+        $array = mysqli_fetch_array($result_id);
+        $userID = $array['userID'];
+        $img = $array['profile_pic'];
+        $username = $array['username'];
 
-            // Calculate current cart item
-            $sql_cart = "SELECT * FROM cart WHERE userID = '$userID'";
-            $result_cart = mysqli_query($con, $sql_cart);
-            $cartQuantity = mysqli_num_rows($result_cart);
-        }
-        else {
-            $username = NULL;
-            $cartQuantity = 0;
+        if ($img == NULL) {
             $img = "user-alt.png";
         }
-    ?>
-    <!-- header section starts  -->
 
+        // Calculate current cart item
+        $sql_cart = "SELECT * FROM cart WHERE userID = '$userID'";
+        $result_cart = mysqli_query($con, $sql_cart);
+        $cartQuantity = mysqli_num_rows($result_cart);
+    } else {
+        $username = NULL;
+        $cartQuantity = 0;
+        $img = "user-alt.png";
+    }
+    ?>
+
+    <!-- header section starts  -->
     <header class="header">
-        <a href="index.php" class="logo" href='#'> 
-        <i class="fas fa-dog"></i> 
-        Galaxy Pet Store </a>
-        
+        <a href="index.php" class="logo" href='#'>
+            <i class="fas fa-dog"></i>
+            Galaxy Pet Store </a>
+
         <nav class="navbar">
             <a href="index.php">Home</a>
             <a href="Main Features/Pet/pets.php">Buy a Pet</a>
@@ -66,12 +63,13 @@
             <a href="Main Features/Accessories & Toys/accessory.php">Pet Accessories</a>
             <a href="Main Features/About Us/members_info.php">About Us</a>
         </nav>
-        
+
         <div id='loginBox'>
             <div class='cart'>
-                <a href='Main Features/Cart/cart.php' >
+                <a href='Main Features/Cart/cart.php'>
                     <div class="fas fa-shopping-cart" id="cart-btn">
-                    <input type='text' id='cartItemQuantity' value='<?php echo $cartQuantity ?>' onclick="location.href='#'" readonly>
+                        <input type='text' id='cartItemQuantity' value='<?php echo $cartQuantity ?>'
+                            onclick="location.href='#'" readonly>
                     </div>
                 </a>
             </div>
@@ -90,8 +88,8 @@
                         <a href='Main Features/Login/logout.php'>Log Out</a>
                     </div>
 
-                </button> 
-            </div>        
+                </button>
+            </div>
         </div>
     </header>
 
@@ -112,9 +110,6 @@
     <!-- home section ends -->
 
     <!-- features section starts  -->
-
-
-
     <section class="features" id="features">
 
         <h1 class="heading"> What we <span>offer</span> </h1>
@@ -141,22 +136,16 @@
                 <p>Get all kinds of your favourite pet Accessories here</p>
                 <a href="Main Features/Accessories & Toys/accessory.php" target="_blank" class="btn">click here</a>
             </div>
-
         </div>
-
     </section>
 
     <!-- features section ends -->
 
     <section class="product" id="product">
-
         <section id="DogFood"></section>
-
         <h1 class="heading"> Our <span>Best Sellers (Pets)</span> </h1>
-    
 
         <div class="box-container">
-
             <div class="box">
                 <span class="discount">-33%</span>
                 <div class="icons">
@@ -206,17 +195,12 @@
                 <div class="price"> RM5,000 <span> RM7,600 </span> </div>
             </div>
 
-        </div>   
-
-        <br>
-        <br>
-        <br>
+        </div>
+        <br /><br /><br />
 
         <h1 class="heading">Our <span>Best Sellers (Pet Food)</span></h1>
 
-
         <div class="box-container">
-
             <div class="box">
                 <span class="discount">-33%</span>
                 <div class="icons">
@@ -249,7 +233,6 @@
                 </div>
                 <div class="price"> RM8.55 <span> RM15.50 </span> </div>
             </div>
-
             <div class="box">
                 <span class="discount">-52%</span>
                 <div class="icons">
@@ -275,7 +258,6 @@
         <h1 class="heading">Our <span>Best Sellers (Pet Accessories)</span></h1>
 
         <div class="box-container">
-
             <div class="box">
                 <span class="discount">-33%</span>
                 <div class="icons">
@@ -292,12 +274,10 @@
                 </div>
                 <div class="price"> RM0.75 <span> RM1.50 </span> </div>
             </div>
-
             <div class="box">
                 <span class="discount">-45%</span>
                 <div class="icons">
                     <a href="#" class="fas fa-heart"></a>
-
                 </div>
                 <img src="images/dogclothes.jpg" alt="">
                 <h3>Dog t-shirt</h3>
@@ -308,7 +288,6 @@
                 </div>
                 <div class="price"> RM5.35 <span> RM10.00 </span> </div>
             </div>
-
             <div class="box">
                 <span class="discount">-50%</span>
                 <div class="icons">
@@ -325,25 +304,13 @@
                 </div>
                 <div class="price"> RM1.00 <span> RM5.00 </span> </div>
             </div>
-
-            
-
-        <br>
-        <br>
-        <br>
-
-
+            <br /><br /><br />
     </section>
 
-
     <!-- categories section starts  -->
-
     <section class="categories" id="categories">
-
         <h1 class="heading"> Pet Accessories <span> types</span> </h1>
-
         <div class="box-container">
-
             <div class="box">
                 <img src="images/collars.jpg" alt="">
                 <h3>Collars</h3>
@@ -378,17 +345,13 @@
                 <p>upto 45% off</p>
                 <a href="#" class="btn">click here</a>
             </div>
-
         </div>
-
     </section>
 
     <!-- categories section ends -->
 
     <!-- middle section starts  -->
-
     <section class="middle" id="middle">
-
         <div class="image">
             <img src="images/fatcat.jfif" alt="">
         </div>
@@ -397,7 +360,6 @@
             <span>Make your pet ecstatic</span>
             <h3>Your Pet will never be sad again!</h3>
         </div>
-
     </section>
 
     <!-- home section ends -->
@@ -405,7 +367,6 @@
     <!-- review section starts  -->
 
     <section class="review" id="review">
-
         <h1 class="heading"> Latest <span>reviews</span> </h1>
 
         <div class="swiper review-slider">
@@ -414,7 +375,8 @@
 
                 <div class="swiper-slide box">
                     <img src="images/messi.jpg" alt="">
-                    <p>Thank you so much.My first time bought a pet through online. Really appreciate I get my pet safe and sound. First experience so great, best services and quick delivery. Trusted seller. 👍👍</p>
+                    <p>Thank you so much.My first time bought a pet through online. Really appreciate I get my pet safe
+                        and sound. First experience so great, best services and quick delivery. Trusted seller. 👍👍</p>
                     <h3>Lionel Messi</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
@@ -452,7 +414,8 @@
 
                 <div class="swiper-slide box">
                     <img src="images/yeonwoo'.jpg" alt="">
-                    <p>👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍</p>
+                    <p>👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍
+                    </p>
                     <h3>yeonwoo</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
@@ -462,34 +425,30 @@
                         <i class="fas fa-star"></i>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
     <!-- review section ends -->
 
-
-
     <!-- footer section starts  -->
-
     <section class="footer">
-
         <div class="box-container">
-
             <div class="box">
                 <a class="logo"><i class="fas fa-dog"></i>Galaxy Pet Store</a>
                 <p>Galaxy Pet Store founded in 2010 at Taman Damai Utama, Puchong, 47180, Puchong</p>
                 <div class="share">
-                    <a href="https://www.facebook.com/petswonderland.com.my/" target="_blank" class="btn fab fa-facebook-f"></a>
-                    <a href="https://twitter.com/pets_wonderland?lang=en" target="_blank" class="btn fab fa-twitter"></a>
-                    <a href="https://www.instagram.com/petswonderlandaus/?hl=en" target="_blank" class="btn fab fa-instagram"></a>
-                    <a href="https://www.linkedin.com/company/petswonderland-malaysia" target="_blank" class="btn fab fa-linkedin"></a>
+                    <a href="https://www.facebook.com/petswonderland.com.my/" target="_blank"
+                        class="btn fab fa-facebook-f"></a>
+                    <a href="https://twitter.com/pets_wonderland?lang=en" target="_blank"
+                        class="btn fab fa-twitter"></a>
+                    <a href="https://www.instagram.com/petswonderlandaus/?hl=en" target="_blank"
+                        class="btn fab fa-instagram"></a>
+                    <a href="https://www.linkedin.com/company/petswonderland-malaysia" target="_blank"
+                        class="btn fab fa-linkedin"></a>
                 </div>
             </div>
-            
+
             <div class="box">
                 <h3>our location</h3>
                 <div class="links">
@@ -518,11 +477,8 @@
                     <a>App store</a>
                 </div>
             </div>
-
         </div>
-
         <h1 class="credit"> created by <span> MNO Company </span> </h1>
-
     </section>
 
     <!-- footer section ends -->
@@ -533,19 +489,19 @@
     <script src="js/script.js"></script>
 
 </body>
-<?php 
-    mysqli_close($con);
+<?php
+mysqli_close($con);
 
-    if (isset($_SESSION['mySession'])) {
-        if ($cartQuantity != 0) {
-            echo "<script>document.getElementById('cartItemQuantity').style.display = 'inline-flex';</script>";
-        }
-        echo    "<script>    
+if (isset($_SESSION['mySession'])) {
+    if ($cartQuantity != 0) {
+        echo "<script>document.getElementById('cartItemQuantity').style.display = 'inline-flex';</script>";
+    }
+    echo "<script>    
                     document.getElementById('profilePic').style.width = '30px';
                     document.getElementById('profilePic').style.height = '30px';
                     document.getElementById('profilePic').style.padding = '0px';
                 </script>";
-        echo "  <script>document.getElementById('dropDown').onmouseover = function() {
+    echo "  <script>document.getElementById('dropDown').onmouseover = function() {
                             document.getElementById('dropDownOption').style.transition = '5s ease';
                             document.getElementById('dropDownOption').style.display = 'block';}
 
@@ -553,10 +509,10 @@
                             document.getElementById('dropDownOption').style.display = '';
                         }
                 </script>";
-    }
-    else {
-        echo "<script>document.getElementById('displayName').style.display = 'none';</script>";
-    }
-   
+} else {
+    echo "<script>document.getElementById('displayName').style.display = 'none';</script>";
+}
+
 ?>
+
 </html>

@@ -1,6 +1,5 @@
-<?php 
-    session_start();
-    session_unset();
-    session_destroy();
-    header("location: Login_inter.php");
-?>
+<?php
+session_start();
+session_unset();
+session_destroy();
+header("location: Login_inter.php");
